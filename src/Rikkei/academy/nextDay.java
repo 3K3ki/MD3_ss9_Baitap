@@ -1,6 +1,6 @@
 package Rikkei.academy;
 
-public class nextDay {
+public class NextDay {
 
     public static String newDay(int day , int month, int year) {
         int newDay=0;
@@ -15,12 +15,12 @@ public class nextDay {
         if( day == 30 || day== 28 || day== 29 ){
             newDay = 1;
             newMonth = month +1 ;
-            newYear = 0;
+            newYear = year;
             return newDay + "/" + newMonth + "/" + newYear;
         }
-        else if(day == 30 || day == 31){
+        else if(day == 31 || month == 12){
             newDay = 1;
-            newMonth = 0;
+            newMonth = month;
             newYear = year +1;
             return newDay + "/" + newMonth + "/" + newYear;
         }
